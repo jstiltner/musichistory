@@ -9,18 +9,18 @@
 
 <body>
 
-	<div class="bordered red">
+	<div class="bordered topbar">
 		<a href="#">View music</a>|<a href="#">Add music</a>|<a href="#">Profile</a>
 	</div>
 	<div id="spacer"> </div>
-	<div class="bordered blue">
-		<div>
+	<p><div class="bordered blue">
+		<div class="blueboxtitles">
 			Song length:
 		</div>
 		<div>
-			<input range>
+			<input name="song length" type=range>
 		</div>
-		<div>
+		<div class="blueboxtitles">
 			Artist
 		</div>
 		<div>
@@ -31,46 +31,45 @@
 			  <option value="Talking Heads">Talking Heads</option>
 			</select>
 		</div>
-		<div>
+		<div class="blueboxtitles">
 			Album
 		</div>
 		<div>
-			<select>
+		  <select>
 			  <option value="Radiohead">Radiohead</option>
 			  <option value="Stromae">Stromae</option>
 			  <option value="Glitch Mob">Glitch Mob</option>
 			  <option value="Talking Heads">Talking Heads</option>
-			</select>
-		</div>
-		<div>
+		  </select>
+	    </div>
+		<div class="blueboxtitles">
 			Genre:
 		</div>
 		<div>
-			<input checkbox value="Rock">Rock
-			<input checkbox value="Classical">Classical
+			<input name="genre" type=checkbox value="Rock">Rock
+			<input name="genre" type=checkbox value="Classical">Classical
 		</div>
 		<div>
-			<input checkbox value="Pop">Pop
-			<input checkbox value="Jazz">Jazz
+			<input name="genre" type=checkbox value="Pop">Pop
+			<input name="genre" type=checkbox value="Jazz">Jazz
 		</div>
 		<div>
-			<input checkbox value="Blues">Blues
-			<input checkbox value="Hip_hop">Hip hop
+			<input name="genre" type=checkbox value="Blues">Blues
+			<input name="genre" type=checkbox value="Hip_hop">Hip hop
 		</div>
 		<div>
 			<button type="filterbutton">Filter</button>
 		</div>
-		<div>
 	</div>
 	<div class="bordered yellow">
 		<div class="bigResultText">Song Name</div>
-		<div>Artist name  |  Album name  |  Genre</div>
-		<div class="bigResultText">Song Name</div>
-		<div>Artist name  |  Album name  |  Genre</div>
-		<div class="bigResultText">Song Name</div>
-		<div>Artist name  |  Album name  |  Genre</div>
-		<div class="bigResultText">Song Name</div>
-		<div>Artist name  |  Album name  |  Genre</div>
+		<div>Artist name      |      Album name      |      Genre</div>
+		<div class="bigResultText">Song name    </div>
+		<div>Artist name      |  Album name      |      Genre</div>
+		<div class="bigResultText">Song name    </div>
+		<div>Artist name      |  Album name      |      Genre</div>
+		<div class="bigResultText">Song name    </div>
+		<div>Artist name      |  Album name      |      Genre</div>
 	</div>
 </body>
 </html>
