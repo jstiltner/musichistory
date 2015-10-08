@@ -23,3 +23,7 @@ background-color: #FEFAC0 ;
 .bigResultText{
 font-size: 28px;
 }
+
+.leftfloat{
+	float: left;
+}
