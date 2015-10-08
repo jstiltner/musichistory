@@ -38,14 +38,3 @@ font-size: 28px;
 color: #704214;
 }
 
-.leftfloat{
-	float: left;
-}
-
-.rightfloat{
-	float: right;
-}
-
-.cleared{
-	clear: left;
-}
