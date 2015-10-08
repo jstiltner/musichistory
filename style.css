@@ -11,7 +11,7 @@ body{
 
 .topbar{
 background-color: #FFB4B0  ;
-padding: 11px;
+padding: 14px;
 }
 
 .blueboxtitles{
@@ -23,16 +23,13 @@ padding: 9px;
 background-color: #4DD7FA; 
 text-align: center;
 float:left; 
-left:6px; 
 width: 18%; 
-height:300px;
 }
 
 .yellow{
-padding: 1em;
+padding: 10px;
 background-color: #FEFAC0 ; 
 width:77%; 
-height:292px;
 float:right
 }
 
