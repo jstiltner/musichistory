@@ -1,0 +1,19 @@
+.bordered{
+	border: 5px;
+}
+
+.red{
+background-color: #FFB4B0  ;
+}
+
+.blue{
+background-color: #4DD7FA ;
+}
+
+.yellow{
+background-color: #FEFAC0 ;
+}
+
+.bigResultText{
+font-size: 28px;
+}
