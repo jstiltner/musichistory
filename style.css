@@ -1,17 +1,62 @@
+	
 body {
-	font-family: arial;
+	font-family: Verdana, Tahoma, arial;
 	padding: 6px;
 	line-height: 1.7;
+	top: 0;
+	left: 0;
+	background-color: #DDDDDD;
+}
+
+a {
+color: #AAAAAA;
+}
+
+a:hover{
+color:white;
+transition: .2s;
+}
+
+#container{
+	margin-top: 55px;
 }
 
 .bordered {
 	border-style: solid;
 	border-width: 2px;
+	border-radius: 6px;
+	border-color: black;
 }
 
+.add-button{
+
+}
+
+.song-input-content {
+	padding: 10px;
+	background-color: #0074D9 ; 
+	width:70%; 
+	margin-left: 18%;
+	color: white;
+	transition: 1s;
+
+}
+
+
+.hidden{
+	display: none;
+}
+
+
 .topbar {
-	background-color: #FFB4B0  ;
+	position: fixed;
+	background-color: #001f3f;
+	width:110%;
+	/*background-color: #FFB4B0  ;*/
 	padding: 14px;
+	top: 0;
+	left: 0;
+	z-index: 1000;
 }
 
 .filterboxtitle {
@@ -20,17 +65,21 @@ body {
 
 .filterbox {
 	padding: 9px;
-	background-color: #4DD7FA; 
+	background-color: #0074D9; 
 	text-align: center;
-	float:left; 
-	width: 18%; 
+	width: 22%;
+	float:left;
+	margin-right:3%;
+	transition: 1s;
 }
 
 .resultsbox {
 	padding: 10px;
-	background-color: #FEFAC0 ; 
-	width:77%; 
-	float:right
+	background-color: white; 
+	width:70%; 
+	float:right;
+	overflow:scroll;
+	transition: 1s;
 }
 
 .bigResultText {
@@ -38,4 +87,14 @@ body {
 	color: #704214;
 }
 
+.rightbuttons{
+float:right;
+text-align:left;
+margin-right: 10px;
+}
 
+.leftbuttons{
+float:left;
+text-align:left;
+margin-left:10px;
+}

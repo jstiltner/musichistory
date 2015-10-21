@@ -3,26 +3,45 @@
 <!--This is the head-->
 <head>
   <meta charset="utf-8">
-  <title>NSS Starter Kit</title>
+  <title>Space Bar Music Player</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <!--The body of the document begins here.-->
 <body>
 <!--This is the code for the top red menu bar-->
-	<div class="bordered topbar">
-		<a href="#">View music</a><strong> | </strong><a href="#">Add music</a><strong> | </strong><a href="#">Profile</a>
+	<div class="topbar">
+		<a href="#" id="view-music">View music</a><strong> | </strong><a href="#" id="add-music">Add music</a><strong> | </strong><a href="#">Profile</a>
+	
 	</div>
+	
+
+	<div id="container">
 <!--The code for the blue box on the left begins here.-->
-	<p><div class="bordered filterbox">
-			<form action="blah.com" method="post" id="musicHistory">
-		<div class="filterboxtitle">
-			Song length:
+		<div class = "hidden bordered song-input-content" id="song-input-content">
+			<div>Song</div>
+			<input id="song-input"></input>
+			<div>Artist</div>
+			<input id="artist-input"></input>
+			<div>Album</div>
+			<input id="album-input"></input>
+			<div class="add-button">
+				<button value="Add" id="add-button">Add</button>
+			</div>
+
+		</div>
+
+
+
+
+	<div class="bordered filterbox" id="filterbox">
+		<form action="blah.com" method="post" id="musicHistory">
+		<div class="filterboxtitle">Song length:
 		</div>
 		<div>
-			<input name="song length" type=range>
+		<input name="song length" type=range>
 		</div>
 		<div class="filterboxtitle">
-			Artist
+			Artist:
 		</div>
 		<div>
 			<select>
@@ -30,11 +49,11 @@
 			  <option name="artist" value="Stromae">Stromae</option>
 			  <option name="artist" value="Glitch Mob">Glitch Mob</option>
 			  <option name="artist" value="Talking Heads">Talking Heads</option>
-			  <option name="artist" value="Tete">Tete
+			  <option name="artist" value="Tete">Tete</option>
 			</select>
 		</div>
 		<div class="filterboxtitle">
-			Album
+			Album:
 		</div>
 		<div>
 		  <select>
@@ -48,33 +67,40 @@
 		<div class="filterboxtitle">
 			Genre:
 		</div>
-		<div>
-			<input name="genre" type=checkbox value="rock">Rock
-			<input name="genre" type=checkbox value="techno">Techno
+		<div class="buttonbox">
+			<div class="leftbuttons">
+				<div><input name="genre" type=checkbox value="rock">Rock</div>
+				<div><input name="genre" type=checkbox value="techno">Techno</div>
+				<div><input name="genre" type=checkbox value="pop">Pop</div></div>
+		<div class="rightbuttons">
+		
+			<div><input name="genre" type=checkbox value="jazz">Jazz</div>
+			<div><input name="genre" type=checkbox value="blues">Blues</div>
+			<div><input name="genre" type=checkbox value="hip hop">Hip hop</div>
 		</div>
-		<div>
-			<input name="genre" type=checkbox value="pop">Pop
-			<input name="genre" type=checkbox value="jazz">Jazz
-		</div>
-		<div>
-			<input name="genre" type=checkbox value="blues">Blues
-			<input name="genre" type=checkbox value="hip hop">Hip hop
-		</div>
-		<div>
+		<div id="filterbutton">
 			<button type="filterbutton">Filter</button>
-		</div>
+			</div>
+			</div>
+		
 	</div>
 	</form>
 <!--The code for the yellow box on the right begins here.  Song results are presently hard coded.-->
-	<div class="bordered resultsbox">
-		<div class="bigResultText">You and Whose army?</div>
-		<div>Radiohead | Amnesiac | Rock</div>
-		<div class="bigResultText">Tous les Memes</div>
-		<div>Stromae | Racines carres | Techno</div>
-		<div class="bigResultText">Certified Air Raid Material</div>
-		<div> Glitch Mob | Certified Air Raid Material | Techno</div>
-		<div class="bigResultText">Once in a Lifetime</div>
-		<div>Talking Heads | Once in a Lifetime | Rock</div>	
-	</div>
+	<div class="bordered resultsbox" id="resultsbox">
+		<!-- <article>
+		<section><div class="bigResultText">You and Whose army?</div>
+		<div>Radiohead | Amnesiac | Rock</section>
+		<section><div class="bigResultText">Tous les Memes</div></section>
+		<section><div class="bigResultsText">Stromae | Racines carres | Techno</section>
+		<section><div class="bigResultText">Certified Air Raid Material</div>
+		<div> Glitch Mob | Certified Air Raid Material | Techno</section>
+		<section><div class="bigResultText">Once in a Lifetime</div>
+		<div>Talking Heads | Once in a Lifetime | Rock</section></div>
+		 -->
+		</section></div></section></div>
+	
+	<div>
+	<div id="songs-element"></div></div>	
+<script src="songs.js"></script>
 </body>
 </html>
