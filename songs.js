@@ -1,79 +1,66 @@
+$(document).ready(function() {
+//Generates arrays
+var songs=[];
+var artists=[];
+var albums=[];
+//Pre-loads four songs into arrays.
+songs = ["You and Whose Army?", "Tous les memes", "Certified Air Raid Material", "Once in a Lifetime"];
+artists = ["Radiohead", "Stromae", "Glitch Mob", "Talking Heads"];
+albums = ["Amnesiac", "Racines Carres", "Certified Air Raid Material", "Once in a Lifetime"];
+//function definitions
+
 function rebuildResults(){
 var resultsContents = document.getElementById("resultsbox");
 resultsContents.innerHTML = "<article>";
 	for (i=0 ; i < artists.length; i++){
-resultsContents.innerHTML += "<section><div class = 'bigResultText'>" + songs[i] + "</div><div>by " + artists[i] + " on the album " + albums[i] + "</section";
+		resultsContents.innerHTML += "<section><div class = 'bigResultText'>" + songs[i] + "</div><div>by " + artists[i] + " on the album " + albums[i] + "</section";
 }
 }
 
-var songs=[];
-var artists=[];
-var albums=[];
+function goToAddMusicView(){
+	$("#song-input-content").show();
+	$("#filterbox").hide();
+	$("#resultsbox").hide();
+}
 
-
-songs = ["You and Whose Army?", "Tous les memes", "Certified Air Raid Material", "Once in a Lifetime"];
-artists = ["Radiohead", "Stromae", "Glitch Mob", "Talking Heads"];
-albums = ["Amnesiac", "Racines Carres", "Certified Air Raid Material", "Once in a Lifetime"];
+function goToViewMusicView(){
+	$("#song-input-content").hide();
+	$("#filterbox").show();
+	$("#resultsbox").show();
+}
+//Loads Pre-loaded songs into results div
 rebuildResults();
 
-// Add Music View
-var button = document.getElementById("add-music");
-button.addEventListener("click", function(){
-	var El = document.getElementById("song-input-content");
-	El.classList.remove("hidden");
-	var ElOne = document.getElementById("filterbox");
-	ElOne.classList.add("hidden");
-	var Eltwo = document.getElementById("resultsbox");
-	Eltwo.classList.add("hidden");
-
-});
-
-// List Music View
-var view = document.getElementById("view-music");
-view.addEventListener("click", function(){
-	var El = document.getElementById("song-input-content");
-	El.classList.add("hidden");
-	var El = document.getElementById("filterbox");
-	El.classList.remove("hidden");
-	var Eltwo = document.getElementById("resultsbox");
-	Eltwo.classList.remove("hidden");
-	rebuildResults();
-});
+// Ties named functions to buttons
+$("#add-music").click(goToAddMusicView);
+$("#view-music").click(goToViewMusicView);
 
 // Add Button triggers the addition of new elements to the arrays and switches views
-var addSong = document.getElementById("add-button");
-addSong.addEventListener("click", function(){
-var newSong = document.getElementById("song-input").value;
-var newArtist = document.getElementById("artist-input").value;
-var newAlbum = document.getElementById("album-input").value;
-if(document.getElementById("song-input").value.length === 0){
-	alert("Aghem, your song, fool.")
-	document.getElementById("song-input").focus();
-	return false;
-}
-else if (document.getElementById("artist-input").value.length === 0){
-	alert("Aghem, who's that artist, joker?")
-	document.getElementById("artist-input").focus();
-	return false;
-}
-else if (document.getElementById("album-input").value.length === 0){
-	alert("Aghem, which album, boss?")
-	document.getElementById("album-input").focus();
-	return false;
-}
-
-songs.push(newSong);
-artists.push(newArtist);
-albums.push(newAlbum);
-var El = document.getElementById("song-input-content");
-	El.classList.add("hidden");
-	var El = document.getElementById("filterbox");
-	El.classList.remove("hidden");
-	var Eltwo = document.getElementById("resultsbox");
-	Eltwo.classList.remove("hidden");
+$("#add-button").click(function(){
+	//form-checker for #Add-music view
+	if ($("#song-input").val().length === 0){
+		alert("Aghem, your song, fool.")
+		$("#song-input").focus();
+		return false;
+	}
+	else if ($("#artist-input").val().length === 0){
+		alert("Aghem, who's that artist, joker?")
+		$("#artist-input").focus();
+		return false;
+	}
+	else if ($("#album-input").val().length === 0){
+		alert("Aghem, which album, boss?")
+		$("#album-input").focus();
+		return false;
+	}
+	songs.push($("#song-input").val());
+	artists.push($("#song-input").val());
+	albums.push($("#song-input").val());
+	goToViewMusicView();
 	rebuildResults();
-
 });
+
+
 
 
 
@@ -124,7 +111,7 @@ var El = document.getElementById("song-input-content");
 // console.log("titles slice", titles);
 // songOutput = songOutput + "<p>" + songs[i] + "</p>"	
 // }
-// var songsElement = document.getElementById("songs-element");
+// var songsElement = $("songs-element");
 // console.log(songOutput);
 // songsElement.innerHTML = songOutput;
 //for (i=0; i<songs.length; i++){
@@ -135,3 +122,4 @@ var El = document.getElementById("song-input-content");
 //for ( i = 0; i < 300 ; i++) {
 
 //}
+});
