@@ -10,10 +10,10 @@ albums = ["Amnesiac", "Racines Carres", "Certified Air Raid Material", "Once in 
 //function definitions
 
 function rebuildResults(){
-var resultsContents = document.getElementById("resultsbox");
-resultsContents.innerHTML = "<article>";
+
+$("#resultsbox").html("<article>");
 	for (i=0 ; i < artists.length; i++){
-		resultsContents.innerHTML += "<section><div class = 'bigResultText'>" + songs[i] + "</div><div>by " + artists[i] + " on the album " + albums[i] + "</section";
+		$("#resultsbox").append("<section><div class = 'bigResultText'>" + songs[i] + "</div><div>by " + artists[i] + " on the album " + albums[i] + "</section");
 }
 }
 
